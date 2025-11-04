@@ -1,0 +1,16 @@
+{%- assign random_index = "now" | date: "%s" | modulo: villagers.size -%}
+{%- assign villager = villagers[random_index] -%}
+{%- assign tip_index = "now" | date: "%s" | divided_by: 7 | modulo: tips.size -%}
+{%- assign random_tip = tips[tip_index] -%}
+{%- assign emphasis = 1 -%}
+ <div class="layout layout--row layout--stretch layout--center-x layout--top">
+    <img class="image  image-dither image--contain" src="{{ villager.portraitUrl }}" alt="{{ villager.name }}" />
+    <div class="column">
+      <div class="item item--emphasis-{{ emphasis }}">
+        <div class="content" data-content-limiter="true">
+          <div class="title">{{ villager.name }}</div>
+          <span class="description">{{ villager.biography }}</span>
+        </div>
+      </div>
+    </div>
+  </div>

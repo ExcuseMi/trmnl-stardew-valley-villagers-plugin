@@ -1,0 +1,26 @@
+---
+strategy: polling
+no_screen_padding: 'no'
+dark_mode: 'no'
+static_data: ''
+polling_verb: get
+polling_url: https://raw.githubusercontent.com/ExcuseMi/trmnl-stardew-valley-villagers-plugin/refs/heads/main/plugin-data.json
+polling_headers: ''
+polling_body: ''
+id: 160532
+custom_fields:
+- keyname: include_tip_of_the_day
+  field_type: select
+  name: Include Tip of the Day
+  description: Only applies to the full view
+  options:
+  - 'Yes'
+  - 'No'
+  default: 'yes'
+- keyname: author_bio
+  field_type: author_bio
+  name: About This Plugin
+  description: Displays a random villager from the Stardew Valley game with their biography, location, birthday, loved and hated gifts and a "tip of the day" for the game Stardew Valley.
+  learn_more_url: https://github.com/ExcuseMi/trmnl-stardew-valley-villagers-plugin
+name: Stardew Valley Villagers
+refresh_interval: 15

@@ -2,13 +2,14 @@ name: Update Plugin Stats in README
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # Daily at 6 AM UTC
+    - cron: '0 6 * * *'
   workflow_dispatch:
   push:
     branches: [ main ]
     paths:
       - '.github/workflows/update-plugin-stats.yml'
       - 'scripts/update_plugin_stats.py'
+      - 'plugins.env'
 
 jobs:
   update-stats:
@@ -31,15 +32,8 @@ jobs:
     - name: Update README with plugin stats
       run: python scripts/update_plugin_stats.py
 
-    - name: Commit and push if changed
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        
-        git add README.md
-        if git diff --staged --quiet; then
-          echo "No changes to commit"
-        else
-          git commit -m "📊 Update plugin statistics in README - $(date -u +'%Y-%m-%d')"
-          git push
-        fi
+    - name: Commit and push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "📊 Update plugin statistics in README"
+        file_pattern: README.md

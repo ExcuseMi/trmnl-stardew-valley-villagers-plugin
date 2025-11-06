@@ -8,12 +8,12 @@ This plugin was created as a fun little way for my kids who love Stardew Valley 
 <!-- PLUGIN_STATS_START -->
 ## 🚀 TRMNL Plugin(s)
 
-*Last updated: 2025-11-05 17:52:04 UTC*
+*Last updated: 2025-11-06 06:36:46 UTC*
 
 
 ## <img src="https://trmnl-public.s3.us-east-2.amazonaws.com/4hb7gxseg6kev24in8gz6tc38ywc" alt="Plugin icon" width="32"/> [Stardew Valley Villagers](https://usetrmnl.com/recipes/160532)
 
-![Plugin screenshot](https://trmnl.s3.us-east-2.amazonaws.com/lqq5yl5ezwtyjm1pgvg34y6nqpdx?response-content-disposition=inline%3B%20filename%3D%22plugin-fe52e6%22%3B%20filename%2A%3DUTF-8%27%27plugin-fe52e6&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA47CRUQUU4VKBBMOF%2F20251105%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20251105T175204Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=00f151f7ddcdd6f880abba9a5587d472eb5d123f7f9a847710d5ce041e7326f7)
+![Plugin screenshot](https://trmnl.s3.us-east-2.amazonaws.com/lqq5yl5ezwtyjm1pgvg34y6nqpdx?response-content-disposition=inline%3B%20filename%3D%22plugin-fe52e6%22%3B%20filename%2A%3DUTF-8%27%27plugin-fe52e6&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA47CRUQUU4VKBBMOF%2F20251106%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20251106T063646Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=114755f1f7d2114bf1aaa5e3f7e570017adfdc656f0ea3efd1aecf3e6e943920)
 ### Description
 Displays a random villager from the Stardew Valley game with their biography, location, birthday, loved and hated gifts and a "tip of the day" for the game Stardew Valley.
 
@@ -22,7 +22,7 @@ Displays a random villager from the Stardew Valley game with their biography, lo
 | Metric | Value |
 |--------|-------|
 | Installs | 1 |
-| Forks | 1 |
+| Forks | 2 |
 
 ---
 

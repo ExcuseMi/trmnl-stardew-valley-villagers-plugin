@@ -2,10 +2,10 @@
 Stardew Valley Villager Card for TRMNL
 Using only Framework classes with dynamic emphasis
 {%- endcomment -%}
-{%- assign random_index = "now" | date: "%s" | modulo: villagers.size -%}
-{%- assign villager = villagers[random_index] -%}
-{%- assign tip_index = "now" | date: "%s" | divided_by: 7 | modulo: tips.size -%}
-{%- assign random_tip = tips[tip_index] -%}
+{%- assign random_index = "now" | date: "%s" | modulo: IDX_0.villagers.size -%}
+{%- assign villager = IDX_0.villagers[random_index] -%}
+{%- assign tip_index = "now" | date: "%s" | divided_by: 7 | modulo: IDX_0.tips.size -%}
+{%- assign random_tip = IDX_0.tips[tip_index] -%}
 {%- assign emphasis = 1 -%}
 <div class="flex flex--col">
   <div class="title title--large">{{ villager.name }}</div>

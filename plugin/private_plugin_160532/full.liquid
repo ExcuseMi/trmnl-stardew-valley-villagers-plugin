@@ -1,7 +1,7 @@
-{%- assign random_index = "now" | date: "%s" | modulo: villagers.size -%}
-{%- assign villager = villagers[random_index] -%}
-{%- assign tip_index = "now" | date: "%s" | divided_by: 7 | modulo: tips.size -%}
-{%- assign random_tip = tips[tip_index] -%}
+{%- assign random_index = "now" | date: "%s" | modulo: IDX_0.villagers.size -%}
+{%- assign villager = IDX_0.villagers[random_index] -%}
+{%- assign tip_index = "now" | date: "%s" | divided_by: 7 | modulo: IDX_0.tips.size -%}
+{%- assign random_tip = IDX_0.tips[tip_index] -%}
 {%- assign emphasis = 1 -%}
 <div class="layout layout--row">
   <div class="column gap">
@@ -45,9 +45,9 @@
     {%- endif -%}
     <div class="item item--emphasis-{{ emphasis }}">
       <div class="meta"></div>
-      <div class="content">
+      <div class="content" data-content-limiter="true">
         <span class="title title--small">❤️ Loves </span>
-        <span class="description" data-content-limiter="true" data-clamp="3">
+        <span class="description" data-clamp="3">
           {%- for item in villager.loves -%}
           {{ item }}{%- unless forloop.last -%},&nbsp; {%- endunless -%}
           {%- endfor -%}
@@ -57,9 +57,9 @@
     {%- assign emphasis = emphasis | plus: 1 | modulo: 3 | plus: 1 -%}
     <div class="item item--emphasis-{{ emphasis }}">
       <div class="meta"></div>
-      <div class="content">
+      <div class="content" data-content-limiter="true">
         <span class="title title--small">😠 Hates</span>
-        <span class="description" data-content-limiter="true" data-clamp="3">
+        <span class="description" data-clamp="3">
           {%- for item in villager.hates -%}
           {{ item }}{%- unless forloop.last -%},&nbsp; {%- endunless -%}
           {%- endfor -%}

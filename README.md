@@ -8,7 +8,7 @@ This plugin was created as a fun little way for my kids who love Stardew Valley 
 <!-- PLUGIN_STATS_START -->
 ## 🚀 TRMNL Plugin(s)
 
-*Last updated: 2026-02-02 07:08:51 UTC*
+*Last updated: 2026-02-03 06:59:37 UTC*
 
 
 ## <img src="assets/plugin-images/160532_icon.png" alt="Stardew Valley Villagers icon" width="32"/> [Stardew Valley Villagers](https://usetrmnl.com/recipes/160532)
@@ -23,7 +23,7 @@ Displays a random villager from the Stardew Valley game with their biography, lo
 | Metric | Value |
 |--------|-------|
 | Installs | 1 |
-| Forks | 11 |
+| Forks | 12 |
 
 ---
 

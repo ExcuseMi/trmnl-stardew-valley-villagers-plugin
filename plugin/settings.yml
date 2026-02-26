@@ -7,7 +7,7 @@ polling_verb: get
 polling_url: "https://raw.githubusercontent.com/ExcuseMi/trmnl-stardew-valley-villagers-plugin/refs/heads/main/plugin-data.json\r\n\r\nhttps://usetrmnl.com/custom_plugin_example_data.json"
 polling_headers: ''
 polling_body: ''
-id: 251115
+id: 160532
 custom_fields:
 - keyname: author_bio
   field_type: author_bio
@@ -15,5 +15,5 @@ custom_fields:
   description: Displays a random villager from the Stardew Valley game with their biography, location, birthday, loved and hated gifts and a "tip of the day" for the game Stardew Valley.
   learn_more_url: https://github.com/ExcuseMi/trmnl-stardew-valley-villagers-plugin
   help_text: TRMNL X Ready
-name: Stardew Valley Villagers (fork)
-refresh_interval: 1440
+name: Stardew Valley Villagers
+refresh_interval: 15

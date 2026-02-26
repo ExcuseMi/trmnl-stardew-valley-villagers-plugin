@@ -1,12 +1,11 @@
-{%- assign emphasis = 1 -%}
- <div class="layout layout--row layout--stretch layout--center-x layout--top">
-    <img class="image  image-dither image--contain" src="{{ villager.portraitUrl }}" alt="{{ villager.name }}" />
-    <div class="column">
-      <div class="item item--emphasis-{{ emphasis }}">
-        <div class="content" data-content-limiter="true">
-          <div class="title">{{ villager.name }}</div>
-          <span class="description" data-clamp="10">{{ villager.biography }}</span>
-        </div>
-      </div>
-    </div>
-  </div>
+{% render "main",
+  villager:villager,
+  random_tip:random_tip,
+  biography_clamp:5,
+  outer_class:"flex flex--row portrait:flex--col",
+  left_class:"flex flex--col portrait:flex--row",
+  name_class:"title title--large",
+  right_class:"flex flex--col",
+  image_class:"h--[30cqw] portrait:w--[20cqw]",
+  tip_under_image_class: "hidden",
+  tip_under_details_class: "portrait:block" %}

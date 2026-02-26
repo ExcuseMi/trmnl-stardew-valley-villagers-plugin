@@ -1,3 +1,101 @@
+{% template main %}
+{%- assign emphasis = 1 -%}
+<style>
+  .sdv-outer { height: 100%; }
+  .sdv-right { flex: 1; min-height: 0; overflow: hidden; }
+</style>
+<div class="layout layout--stretch layout--center-y">
+<div class="{{ outer_class | default: 'flex flex--row' }} sdv-outer">
+  <div class="{{ left_class | default: 'flex flex--col' }} gap no-shrink">
+    <div class="{{ name_class | default: 'title' }}">{{ villager.name }}</div>
+    <img class="image image-dither image--contain {{ image_class }}" src="{{ villager.portraitUrl }}" alt="{{ villager.name }}" />
+    {%- if random_tip.tip -%}
+    {%- assign emphasis = emphasis | plus: 1 | modulo: 3 | plus: 1 -%}
+
+    <div class="item item--emphasis-{{ emphasis }} {{tip_under_image_class}}">
+      <div class="content">
+        <span class="title title--small lg:title--base">{{ random_tip.icon }} Tip of the Day</span>
+        <span class="description lg:description--large">{{ random_tip.tip }}</span>
+      </div>
+    </div>
+    {%- endif -%}
+  </div>
+  <div class="{{ right_class | default: 'flex flex--col' }} sdv-right" data-overflow="true">
+    {%- if details_name_class != blank -%}
+    <div class="{{ details_name_class }}">{{ villager.name }}</div>
+    {%- endif -%}
+    <div class="item item--emphasis-{{ emphasis }}">
+      <div class="meta"></div>
+      <div class="content">
+        <span class="title title--small lg:title--base">🪪 Biography</span>
+        <span class="description lg:description--large" data-clamp="{{ biography_clamp | default: 5 }}" data-content-limiter="true">{{ villager.biography }}</span>
+      </div>
+    </div>
+    {%- assign emphasis = emphasis | plus: 1 | modulo: 3 | plus: 1 -%}
+    <div class="{{ details_row_class | default: 'flex flex--col' }} w--full">
+      <div class="flex flex--col w--full">
+        <div class="item item--emphasis-{{ emphasis }}">
+          <div class="meta"></div>
+          <div class="content">
+            <span class="title title--small lg:title--base">🎂 Birthday</span>
+            <span class="description lg:description--large" data-clamp="5">{{ villager.birthday }}</span>
+          </div>
+        </div>
+      </div>
+      {%- assign emphasis = emphasis | plus: 1 | modulo: 3 | plus: 1 -%}
+      {%- if villager.location -%}
+      <div class="flex flex--col w--full">
+        <div class="item item--emphasis-{{ emphasis }}">
+          <div class="meta"></div>
+          <div class="content">
+            <span class="title title--small lg:title--base">📍 Location</span>
+            <span class="description lg:description--large" data-clamp="5">{{ villager.location }}</span>
+          </div>
+        </div>
+      </div>
+      {%- assign emphasis = emphasis | plus: 1 | modulo: 3 | plus: 1 -%}
+      {%- endif -%}
+    </div>
+    <div class="item item--emphasis-{{ emphasis }} no-shrink">
+      <div class="meta"></div>
+      <div class="content" data-content-limiter="true">
+        <span class="title title--small lg:title--base">❤️ Loves</span>
+        <span class="description lg:description--large" data-clamp="3">
+          {%- for love in villager.loves -%}
+          {{ love }}{%- unless forloop.last -%},&nbsp;{%- endunless -%}
+          {%- endfor -%}
+        </span>
+      </div>
+    </div>
+    {%- assign emphasis = emphasis | plus: 1 | modulo: 3 | plus: 1 -%}
+    <div class="item item--emphasis-{{ emphasis }} no-shrink">
+      <div class="meta"></div>
+      <div class="content" data-content-limiter="true">
+        <span class="title title--small lg:title--base">😠 Hates</span>
+        <span class="description lg:description--large" data-clamp="3">
+          {%- for hate in villager.hates -%}
+          {{ hate }}{%- unless forloop.last -%},&nbsp;{%- endunless -%}
+          {%- endfor -%}
+        </span>
+      </div>
+    </div>
+    {%- if random_tip.tip -%}
+    {%- assign emphasis = emphasis | plus: 1 | modulo: 3 | plus: 1 -%}
+    <div class="item item--emphasis-{{ emphasis }} no-shrink {{tip_under_details_class}}">
+      <div class="content">
+        <span class="title title--small lg:title--base">{{ random_tip.icon }} Tip of the Day</span>
+        <span class="description lg:description--large">{{ random_tip.tip }}</span>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+  </div>
+<div class="title_bar">
+  <span class="title">Stardew Valley Villagers</span>
+</div>
+{% endtemplate %}
+
 {%- assign index = "now" | date: "%s" | modulo: IDX_0.villagers.size -%}
 {%- assign villager = IDX_0.villagers[index] -%}
 {%- assign tip_index = "now" | date: "%s" | divided_by: 7 | modulo: IDX_0.tips.size -%}

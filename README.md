@@ -8,7 +8,7 @@ This plugin was created as a fun little way for my kids who love Stardew Valley 
 <!-- PLUGIN_STATS_START -->
 ## 🚀 TRMNL Plugin(s)
 
-*Last updated: 2026-03-17 07:11:41 UTC*
+*Last updated: 2026-03-18 07:08:46 UTC*
 
 
 ## <img src="assets/plugin-images/160532_icon.png" alt="Stardew Valley Villagers icon" width="32"/> [Stardew Valley Villagers](https://usetrmnl.com/recipes/160532)
